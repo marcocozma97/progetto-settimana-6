@@ -72,16 +72,18 @@ body {
   font-size: 1rem;
   text-decoration: none !important;
   border-bottom: none !important;
-  padding: 0.6rem 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   border-radius: 4px;
   background-color: transparent;
-  border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
 .hero-section .hero-link:hover {
-  background-color: hsl(40, 30%, 90%);
-  color: hsl(20, 30%, 35%) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: hsl(21, 32%, 22%) !important;
+  color: hsl(40, 30%, 90%) !important;
+  box-shadow: none;
 }
 
 /* Servizi Section & Cards */

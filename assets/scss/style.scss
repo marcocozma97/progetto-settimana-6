@@ -25,6 +25,8 @@ html {
     scroll-behavior: smooth;
 }
 
+// root dove inserire le classi
+
 :root {
     --bg-color: #{$color-bg-light};
     --text-color: #{$color-text-dark};
@@ -34,6 +36,7 @@ html {
     --input-bg: #ffffff;
     --input-border: #e0e0e0;
 }
+
 
 [data-theme="dark"] {
     --bg-color: #{$dark-bg};
@@ -49,6 +52,8 @@ html {
         color: #ffffff !important;
     }
 }
+
+// Richiamo con var(--...) le variabili di stile dal :root
 
 body {
     background-color: var(--bg-color);
@@ -99,19 +104,21 @@ body {
     // Bottone / Link interno "Inizia un progetto"
 
     .hero-link {
-        color: $color-text-light !important;
+        color: $color-text-light !important; 
         font-size: 1rem;
-        text-decoration: none !important;
+        text-decoration: none !important;   
         border-bottom: none !important;     
-        padding: 0.6rem 1.5rem;
-        border-radius: 4px;                  
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        border-radius: 4px;                 
         background-color: transparent;      
-        border: 1px solid transparent;
-        transition: $transition;
+        transition: $transition;             
         &:hover {
-            background-color: $color-text-light;      
-            color: $color-hero !important;             
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            background-color: hsl(21, 32%, 22%) !important;
+            color: $color-text-light !important;                  
+            box-shadow: none;                                    
         }
     }
 }
