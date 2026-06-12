@@ -1,191 +1,211 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpiShop — E-commerce</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <body>
 
-    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-      <div class="container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier - Architettura per spazi che parlano</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-        <a class="navbar-brand fw-bold" href="#">EpiShop</a>
+<body>
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#nav-menu"
-                aria-controls="nav-menu" aria-expanded="false"
-                aria-label="Apri menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <nav class="navbar navbar-expand-md sticky-top" id="mainNav">
+    <div class="container-fluid px-4 px-xl-5 d-flex align-items-center">
+      
+      <a class="navbar-brand text-white fw-bold order-1">Atelier</a>
 
-        <div class="collapse navbar-collapse" id="nav-menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#prodotti">Prodotti</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Offerte</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+      <div class="collapse navbar-collapse order-3 order-md-2 justify-content-md-end" id="navbarContent">
+        <ul class="navbar-nav text-start text-md-start">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#residenziale">Residenziale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#interior-design">Interior Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#ristrutturazioni">Ristrutturazioni</a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="themeToggle" class="btn btn-link text-white text-decoration-none order-2 order-md-3 ms-auto ms-md-3 me-3 me-md-0" title="Cambia Tema">Tema scuro</button>
+
+      <button class="navbar-toggler border-0 shadow-none order-4" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white fs-4"></i>
+      </button>
+
+    </div>
+  </nav>
+
+  <header id="studio" class="hero-section d-flex align-items-center text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-xl-8">
+          <h1 class="text-white fw-bold mb-3">Architettura per spazi che parlano</h1>
+          <p class="text-white mb-5 hero-subtitle">Progettiamo case, uffici e spazi commerciali con attenzione alla
+            luce, ai materiali e al contesto.</p>
+          <a href="#contatti" class="text-white text-decoration-none border-bottom pb-1 hero-link">Inizia un
+            progetto</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="servizi" class="services-section py-5">
+    <div class="container py-4 text-center">
+      <h2 class="fw-bold mb-2 section-title">I nostri servizi</h2>
+      <p class="text-muted mb-5 section-subtitle">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+
+      <div id="residenziale" class="row g-4 justify-content-center">
+        <div class="col-12 col-md-4 col-xl-4">
+          <div class="service-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modalResidenziale">
+            <div class="icon-placeholder mb-3 fs-3">🏠</div>
+            <h4 class="fw-bold fs-5">Progettazione residenziale</h4>
+            <p class="text-muted fs-6 mb-0">Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla
+              consegna delle chiavi.</p>
+          </div>
+        </div>
+        <div id="interior-design" class="col-12 col-md-4 col-xl-4">
+          <div class="service-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modalInterior">
+            <div class="icon-placeholder mb-3 fs-3">🪑</div>
+            <h4 class="fw-bold fs-5">Interior design</h4>
+            <p class="text-muted fs-6 mb-0">Allestimenti d'interno per case e uffici, con materiali selezionati e arredo
+              su misura.</p>
+          </div>
+        </div>
+        <div id="ristrutturazioni" class="col-12 col-md-4 col-xl-4">
+          <div class="service-card p-4 h-100" data-bs-toggle="modal" data-bs-target="#modalRistrutturazioni">
+            <div class="icon-placeholder mb-3 fs-3">🧱</div>
+            <h4 class="fw-bold fs-5">Ristrutturazioni</h4>
+            <p class="text-muted fs-6 mb-0">Riqualificazione di spazi esistenti, gestione dei lavori e coordinamento con
+              le imprese.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti" class="contact-section py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2 section-title">Contattaci</h2>
+        <p class="text-muted section-subtitle">Compila il form, ti rispondiamo entro 48 ore.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-xl-6">
+          <form class="contact-form">
+            <div class="mb-3">
+              <label for="nome" class="form-label fs-6">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fs-6">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="tipoProgetto" class="form-label fs-6">Tipo di progetto</label>
+              <select class="form-select" id="tipoProgetto">
+                <option value="residenziale">Residenziale</option>
+                <option value="interior">Interior design</option>
+                <option value="ristrutturazione">Ristrutturazione</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="messaggio" class="form-label fs-6">Messaggio</label>
+              <textarea class="form-control" id="messaggio" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit w-100 text-white py-2 fw-bold">Invia</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section py-5 text-white">
+    <div class="container px-4 px-xl-5">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold mb-3">Atelier</h5>
+          <p class="mb-1 text-light-alpha">Studio di architettura</p>
+          <p class="text-light-alpha">Via dei Pioppi 12, Milano</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold mb-3">Link</h5>
+          <ul class="list-unstyled">
+            <li><a href="#studio" class="text-light-alpha text-decoration-none">Studio</a></li>
+            <li><a href="#servizi" class="text-light-alpha text-decoration-none">Servizi</a></li>
+            <li><a href="#contatti" class="text-light-alpha text-decoration-none">Contatti</a></li>
           </ul>
-          <button id="toggle-tema" type="button" class="btn btn-outline-light ms-md-2 mt-2 mt-md-0">
-            Tema scuro
-          </button>
         </div>
-
-      </div>
-    </nav>
-
-    <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <div class="bg-primary text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Saldi di primavera</h2>
-              <p class="fs-5 m-0">Fino al 50% di sconto sui prodotti in evidenza</p>
-            </div>
-          </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold mb-3">Contatti</h5>
+          <p class="mb-1"><a href="mailto:info@atelier.example"
+              class="text-light-alpha text-decoration-none">info@atelier.example</a></p>
+          <p><a href="tel:+390200001111" class="text-light-alpha text-decoration-none">+39 02 0000 1111</a></p>
         </div>
-
-        <div class="carousel-item">
-          <div class="bg-success text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Nuova collezione</h2>
-              <p class="fs-5 m-0">Scopri gli arrivi della settimana</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="bg-dark text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Spedizione gratis</h2>
-              <p class="fs-5 m-0">Sopra i 50 € su tutto il sito</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
+      <hr class="my-4 border-secondary">
+
+      <div class="text-center text-md-center text-light-alpha small">
+        © 2026 Atelier — tutti i diritti riservati
+      </div>
     </div>
+  </footer>
 
-    <main id="prodotti" class="container my-5">
-      <div class="row">
-
-        <aside class="col-lg-3 d-none d-lg-block">
-          <div class="bg-light p-3 rounded border">
-            <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-            <p class="m-0 mb-2">Scarpe</p>
-            <p class="m-0 mb-2">T-shirt</p>
-            <p class="m-0 mb-2">Borse</p>
-            <p class="m-0 mb-2">Accessori</p>
-          </div>
-        </aside>
-
-        <section class="col-12 col-lg-9">
-          <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">
-            Prodotti in evidenza
-            <span class="badge bg-danger fs-6">-30%</span>
-          </h2>
-
-          <div class="row">
-
-            <article class="col-12 col-sm-6 col-xl-4 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="Sneaker Run">
-                <div class="card-body">
-                  <h5 class="card-title">Sneaker Run</h5>
-                  <p class="card-text text-muted">Scarpa leggera per la corsa, suola in gomma traspirante.</p>
-                  <p class="fw-bold fs-5 m-0">€ 89,00</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button type="button" class="btn btn-primary w-100"
-                          data-bs-toggle="modal" data-bs-target="#prodotto-1">
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="T-shirt basic">
-                <div class="card-body">
-                  <h5 class="card-title">T-shirt basic</h5>
-                  <p class="card-text text-muted">Cotone biologico, taglio regolare, disponibile in 5 colori.</p>
-                  <p class="fw-bold fs-5 m-0">€ 19,00</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button type="button" class="btn btn-primary w-100"
-                          data-bs-toggle="modal" data-bs-target="#prodotto-1">
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <article class="col-12 col-sm-6 col-xl-4 mb-3">
-              <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/300x180" class="card-img-top" alt="Borsa city">
-                <div class="card-body">
-                  <h5 class="card-title">Borsa city</h5>
-                  <p class="card-text text-muted">Tessuto resistente, tasca interna, cinghia regolabile.</p>
-                  <p class="fw-bold fs-5 m-0">€ 49,00</p>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <button type="button" class="btn btn-primary w-100"
-                          data-bs-toggle="modal" data-bs-target="#prodotto-1">
-                    Dettagli
-                  </button>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </section>
-
-      </div>
-    </main>
-
-    <div class="modal fade" id="prodotto-1" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <h5 class="modal-title">Sneaker Run</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-          </div>
-
-          <div class="modal-body">
-            <img src="https://placehold.co/600x300" class="img-fluid mb-3" alt="">
-            <p>Scarpa leggera per la corsa, suola in gomma traspirante. Disponibile dal 36 al 46.</p>
-            <p class="fw-bold fs-4 m-0">€ 89,00</p>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-            <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-          </div>
-
+  <div class="modal fade" id="modalResidenziale" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">🏠 | Progettazione residenziale</h5>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla consegna delle chiavi. Seguiamo
+            ogni passo con cura per realizzare la casa dei tuoi sogni.</p>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-      <div class="container text-center">
-        <p class="m-0">© 2026 EpiShop — tutti i diritti riservati</p>
+  <div class="modal fade" id="modalInterior" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">🪑 | Interior design</h5>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Allestimenti d'interno per case e uffici, con materiali selezionati e arredo su misura. Ottimizziamo gli
+            spazi per renderli funzionali ed eleganti.</p>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+  <div class="modal fade" id="modalRistrutturazioni" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">🧱 | Ristrutturazioni</h5>
+          <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Riqualificazione di spazi esistenti, gestione dei lavori e coordinamento con le imprese. Gestiamo la
+            burocrazia e il cantiere per te.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
